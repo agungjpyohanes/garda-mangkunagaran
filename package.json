@@ -1,0 +1,9 @@
+{
+  "name": "gardajateng",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Company profile Garda Mangkunagaran Cabang Jawa Tengah & DIY",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
