@@ -1,0 +1,37 @@
+[
+  {
+    "id": "01",
+    "category": "BUDAYA",
+    "themeClass": "culture",
+    "symbol": "❋",
+    "title": "Menjaga warisan,<br />menghidupkan makna.",
+    "items": [
+      "Pendampingan dan partisipasi dalam Kirab Pusaka Dalem Malam 1 Sura, Tingalan Jumenengan KGPAA Mangkunagoro X, dan agenda seni-budaya.",
+      "Sarasehan Budaya dan webinar publik untuk memperkenalkan warisan leluhur.",
+      "Mendukung keterlibatan generasi muda dalam Bregada Mangkunegaran (pasukan tradisional keraton)."
+    ]
+  },
+  {
+    "id": "02",
+    "category": "SOSIAL & SPIRITUAL",
+    "themeClass": "social",
+    "symbol": "✳",
+    "title": "Hadir dengan<br />kepedulian.",
+    "items": [
+      "Penyaluran bingkisan Lebaran berkala kepada juru kunci dan merbot di makam/petilasan leluhur Mangkunagaran di Temanggung, Magelang, Wonogiri, Karanganyar, dan wilayah lainnya.",
+      "Pemeriksaan kesehatan gratis bagi abdi dalem dan karyawan Pura Mangkunegaran bersama Rumah Sakit dr. Oen Kandang Sapi Surakarta."
+    ]
+  },
+  {
+    "id": "03",
+    "category": "KADERISASI",
+    "themeClass": "cadre",
+    "symbol": "⌁",
+    "title": "Membuka ruang<br />bagi generasi.",
+    "items": [
+      "Pembekalan dan Penerimaan Anggota Baru (PPAB) secara rutin, termasuk PPAB 2025 di Riyadi Palace Hotel, Surakarta.",
+      "Regenerasi kepengurusan melalui Musyawarah Luar Biasa (MLB).",
+      "Sistem magang bagi calon anggota."
+    ]
+  }
+]

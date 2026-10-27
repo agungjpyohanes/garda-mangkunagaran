@@ -1,0 +1,61 @@
+{
+  "periode": "2025—2028",
+  "wilayah": "Jawa Tengah & DIY",
+  "dewanWiku": {
+    "title": "Dewan Wiku",
+    "members": [
+      { "role": "Ketua", "name": "Drs. H. K. P. H. Tjuk Soesilo Hadihardjono, M. PA." },
+      { "role": "Wakil Ketua", "name": "R. M. T. Suprodjo Satyotomo" },
+      { "role": "Anggota", "name": "Dr. R. Ay. T. Irawati Kusumorasri, M. Sn." },
+      { "role": "Anggota", "name": "dr. K. R. T. H. Wikan Basworo, Sp.FMI.,M.Sc" }
+    ]
+  },
+  "dewanPengurus": {
+    "title": "Dewan Pengurus",
+    "members": [
+      { "role": "Ketua Umum", "name": "R. Yudi Prastiawan, S.T." },
+      { "role": "Ketua Harian", "name": "R. Iswahyudi, S. Sn." },
+      { "role": "Sekretaris 1", "name": "R. Yohanes Agung Jaka Prakosa, M.M." },
+      { "role": "Sekretaris 2", "name": "R. Brian Respati, S.ST. CHFI." },
+      { "role": "Bendahara 1", "name": "R.M. Mursitoadi, S.E." },
+      { "role": "Bendahara 2", "name": "R. Ngt. Retno Pudyorini, S.H., M.H." }
+    ]
+  },
+  "seksi": [
+    {
+      "code": "SEKSI 01",
+      "name": "Organisasi & Seni Budaya",
+      "members": [
+        "R. Budhi Wibowo, S.Pd.",
+        "Andreas Tiyas Nugroho, A.Md.",
+        "Chrisnawanto Nugroho, S.Pd."
+      ]
+    },
+    {
+      "code": "SEKSI 02",
+      "name": "Sosial & Religi",
+      "members": [
+        "Mas Demang Triwiyanto",
+        "Ali Mustafa, S.Pd."
+      ]
+    },
+    {
+      "code": "SEKSI 03",
+      "name": "Humas",
+      "members": [
+        "R. Angga Sulvana Chandra, S.E.",
+        "Joko Widodo, S.Si.",
+        "R. Dzari Wahyu Luhur Prakoso, S.Pd.",
+        "Adrianus Hendry Yudha Wicaksono, A.Md."
+      ]
+    },
+    {
+      "code": "SEKSI 04",
+      "name": "Dana Usaha",
+      "members": [
+        "Rr. Ani Restuningsih, S.Pd., M.Hum.",
+        "R.Ngt. Christina Irnawati, S.Psi., M.Psi., Psikolog., CHt., CI"
+      ]
+    }
+  ]
+}

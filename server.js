@@ -2,7 +2,8 @@ const { createReadStream, statSync } = require('node:fs');
 const { createServer } = require('node:http');
 const path = require('node:path');
 
-const root = path.resolve(__dirname, 'public');
+const publicRoot = path.resolve(__dirname, 'public');
+const srcRoot = path.resolve(__dirname, 'src');
 const port = Number(process.env.PORT || 3000);
 const contentTypes = {
   '.css': 'text/css; charset=utf-8',
@@ -53,7 +54,12 @@ createServer((request, response) => {
     return;
   }
 
-  const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+  const isSrcRequest = pathname.startsWith('/src/');
+  const root = isSrcRequest ? srcRoot : publicRoot;
+  const relativePath = isSrcRequest
+    ? pathname.replace(/^\/src\/?/, '')
+    : (pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, ''));
+
   const filePath = path.resolve(root, relativePath);
   if (filePath !== root && !filePath.startsWith(`${root}${path.sep}`)) {
     response.writeHead(404);

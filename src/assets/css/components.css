@@ -1,0 +1,174 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.brand__mark {
+  width: 54px;
+  height: 54px;
+  border: 0;
+  background: transparent;
+  object-fit: contain;
+}
+
+.brand__name {
+  display: flex;
+  flex-direction: column;
+  color: var(--pine);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.35;
+}
+
+.brand__name span {
+  color: #596649;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .115em;
+}
+
+.brand--footer .brand__mark {
+  width: 46px;
+  height: 46px;
+}
+
+.brand--footer .brand__name {
+  font-size: 10px;
+}
+
+.brand--footer .brand__name span {
+  font-size: 8px;
+}
+
+.eyebrow, .section-kicker, .card-label {
+  margin: 0;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .19em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #697349;
+}
+
+.eyebrow__line {
+  display: inline-block;
+  width: 34px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.section-kicker span {
+  color: #806724;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.section-kicker--light {
+  color: #dfe5d0;
+}
+
+.section-kicker--light span {
+  color: var(--gold-light);
+}
+
+.button {
+  min-height: 48px;
+  padding: 13px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .015em;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--green {
+  color: white;
+  background: var(--pine);
+}
+
+.button--green:hover {
+  background: var(--green);
+}
+
+.button--gold {
+  color: var(--pine-deep);
+  background: var(--gold-light);
+}
+
+.button--gold:hover {
+  background: #f5e59f;
+}
+
+.text-link {
+  color: var(--pine);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link span {
+  padding-left: 5px;
+  color: #8f772e;
+}
+
+.ribbon-dot {
+  color: #b39535;
+  font-size: 13px;
+}
+
+.numbered-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: value-counter;
+}
+
+.numbered-list li {
+  position: relative;
+  margin: 0 0 15px;
+  padding: 0 0 0 34px;
+  color: #e0e3d9;
+  counter-increment: value-counter;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.numbered-list li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--gold-light);
+  content: "0" counter(value-counter);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}

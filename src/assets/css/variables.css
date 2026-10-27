@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+  --pine: #173b2d;
+  --pine-deep: #102f24;
+  --green: #28583d;
+  --leaf: #6d8c57;
+  --pale-leaf: #dbe3bd;
+  --gold: #d2ab3e;
+  --gold-light: #efd87e;
+  --cream: #fbf8ee;
+  --cream-deep: #f2eddc;
+  --ink: #25352b;
+  --muted: #6d786b;
+  --line: #dfe3d4;
+  --display: "Playfair Display", Georgia, serif;
+  --body: "DM Sans", "Segoe UI", sans-serif;
+  --page-width: 1240px;
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--cream);
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
