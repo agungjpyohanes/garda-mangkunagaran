@@ -5,7 +5,7 @@
  * - Validates data integrity (including title and honorifics)
  * - Validates modular components
  * - Bundles/syncs CSS from src/assets/css to public/styles.css
- * - Verifies asset paths and zero orphan files / broken links
+ * - Verifies asset paths, logo & favicon references, and zero orphan files / broken links
  */
 
 const fs = require('node:fs');
@@ -33,7 +33,11 @@ function scanDirForText(dir, text) {
     if (file.isFile()) {
       const fullPath = path.resolve(file.parentPath || file.path, file.name);
       // Skip scripts, .git, and node_modules
-      if (fullPath.includes(`${path.sep}scripts${path.sep}`) || fullPath.includes(`${path.sep}.git${path.sep}`) || fullPath.includes(`${path.sep}node_modules${path.sep}`)) {
+      if (
+        fullPath.includes(`${path.sep}scripts${path.sep}`) ||
+        fullPath.includes(`${path.sep}.git${path.sep}`) ||
+        fullPath.includes(`${path.sep}node_modules${path.sep}`)
+      ) {
         continue;
       }
       if (searchFileForText(fullPath, text)) {
@@ -139,6 +143,30 @@ for (const img of imageAssets) {
   }
 }
 console.log(`✅ All ${imageAssets.length} image assets in public/images/ verified.`);
+
+// 5b. Verify all logo and favicon references in HTML files use valid /images/ path
+const htmlFilesToCheck = [
+  indexHtmlPath,
+  path.resolve(srcDir, 'components', 'header.html'),
+  path.resolve(srcDir, 'components', 'footer.html'),
+];
+
+for (const htmlFile of htmlFilesToCheck) {
+  const content = fs.readFileSync(htmlFile, 'utf8');
+  if (content.includes('manus-storage/garda-logo')) {
+    console.error(`❌ Legacy manus-storage logo path found in: ${htmlFile}`);
+    process.exit(1);
+  }
+  if (!content.includes('src="/images/garda-logo-latest.webp"')) {
+    console.error(`❌ Missing src="/images/garda-logo-latest.webp" in: ${htmlFile}`);
+    process.exit(1);
+  }
+  if (!content.includes('data-fallback="/images/garda-logo-latest.webp"')) {
+    console.error(`❌ Missing data-fallback="/images/garda-logo-latest.webp" in: ${htmlFile}`);
+    process.exit(1);
+  }
+}
+console.log('✅ All logo references use verified /images/ absolute path and data-fallback.');
 
 // 6. Verify JS entry points and modules
 const jsFiles = [

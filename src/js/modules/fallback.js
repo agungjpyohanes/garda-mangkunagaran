@@ -1,14 +1,20 @@
 /**
  * Image fallback module
- * Switches to local fallback image if remote or primary asset fails to load.
+ * Switches to local fallback image if primary asset fails to load,
+ * or gracefully hides broken non-essential images.
  */
 export function initImageFallback() {
-  document.querySelectorAll('img[data-fallback]').forEach((image) => {
+  document.querySelectorAll('img').forEach((image) => {
     const fallback = image.dataset.fallback;
     const useFallback = () => {
-      if (image.dataset.fallbackUsed === 'true') return;
-      image.dataset.fallbackUsed = 'true';
-      image.src = fallback;
+      if (fallback) {
+        if (image.dataset.fallbackUsed === 'true') return;
+        image.dataset.fallbackUsed = 'true';
+        image.src = fallback;
+      } else {
+        // Gracefully hide broken non-essential images
+        image.style.visibility = 'hidden';
+      }
     };
 
     image.addEventListener('error', useFallback, { once: true });
